@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TwilightHawk Tech - We build social and interactive mobile apps</title>
+<meta name="description" content="TWILIGHTHAWK TECH PRIVATE LIMITED is a technology company based in Tamil Nadu, India, that designs and develops mobile and web applications. Makers of DoYt!, a social video-challenge platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#13131f;        /* deep dusk base */
+  --ink:#1b1b29;
+  --haze:#2a2a3d;
+  --dusk1:#3b2d5e;        /* twilight violet */
+  --dusk2:#8a5a8e;        /* muted magenta */
+  --ember:#e08a4c;        /* hawk-feather amber, the one accent */
+  --mist:#c9c6d6;         /* soft lilac-grey text on dark */
+  --paper:#f6f4f0;        /* warm off-white sections */
+  --paperink:#232031;
+  --line:#e3dfe6;
+  --muted:#6f6a7d;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--paperink);
+  font:17px/1.65 "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:500;letter-spacing:-0.01em;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(19,19,31,0.82);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:11px;color:#fff;text-decoration:none;font-family:"Fraunces",serif;font-size:19px;font-weight:600;letter-spacing:-0.01em}
+.mark{width:26px;height:auto;flex:0 0 26px;object-fit:contain}
+.nav-links{display:flex;gap:30px}
+.nav-links a{color:var(--mist);text-decoration:none;font-size:14.5px;transition:color .2s}
+.nav-links a:hover{color:var(--ember)}
+@media(max-width:620px){.nav-links{display:none}}
+
+/* hero */
+.hero{
+  position:relative;
+  background:
+    radial-gradient(130% 90% at 78% -10%, rgba(224,138,76,0.22), transparent 55%),
+    radial-gradient(120% 100% at 10% 0%, rgba(138,90,142,0.30), transparent 60%),
+    linear-gradient(180deg, var(--night) 0%, #191826 100%);
+  color:#fff;
+  overflow:hidden;
+}
+.hero-inner{padding:118px 0 128px;position:relative;z-index:2}
+.eyebrow{font-size:13.5px;letter-spacing:0.04em;color:var(--ember);margin-bottom:26px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--ember);display:inline-block}
+.hero h1{font-size:clamp(40px,6.4vw,74px);line-height:1.03;color:#fff;max-width:14ch}
+.hero h1 em{font-style:italic;color:var(--ember)}
+.hero p.lead{margin:30px 0 0;font-size:clamp(17px,2.1vw,21px);line-height:1.55;color:var(--mist);max-width:52ch}
+.hero-cta{margin-top:42px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:500;font-size:15.5px;padding:14px 26px;border-radius:2px;transition:transform .15s, background .2s, border-color .2s}
+.btn-primary{background:var(--ember);color:#17141f}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(255,255,255,0.28);color:#fff}
+.btn-ghost:hover{border-color:var(--ember);color:var(--ember)}
+/* horizon hawk silhouette line */
+.horizon{position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(224,138,76,0.5),transparent);z-index:1}
+
+/* section base */
+section{padding:92px 0}
+.kicker{font-size:13px;letter-spacing:0.05em;text-transform:uppercase;color:var(--dusk2);font-weight:600;margin-bottom:18px}
+.sec-head{font-size:clamp(28px,4vw,40px);line-height:1.12;max-width:20ch}
+.sec-sub{font-size:18px;color:var(--muted);max-width:60ch;margin-top:18px}
+
+/* what we do */
+.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px;margin-top:54px}
+@media(max-width:840px){.cols{grid-template-columns:1fr;gap:28px}}
+.col h3{font-size:21px;margin-bottom:12px}
+.col-num{font-family:"Fraunces",serif;font-size:15px;color:var(--ember);margin-bottom:16px;display:block}
+.col p{color:var(--muted);font-size:15.5px;line-height:1.6;margin:0}
+.col{border-top:1px solid var(--line);padding-top:22px}
+
+/* product feature - DoYt */
+.product{background:var(--night);color:#fff}
+.product .wrap{display:grid;grid-template-columns:1.05fr 0.95fr;gap:60px;align-items:center}
+@media(max-width:840px){.product .wrap{grid-template-columns:1fr;gap:40px}}
+.product .kicker{color:var(--ember)}
+.product h2{font-size:clamp(30px,4.4vw,46px);color:#fff;line-height:1.08}
+.product p{color:var(--mist);font-size:17px;margin:22px 0 0;max-width:46ch}
+.loop{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 0}
+.loop span{border:1px solid rgba(255,255,255,0.18);color:var(--mist);font-size:13.5px;padding:7px 14px;border-radius:20px}
+.product-cta{margin-top:34px}
+/* phone-ish visual */
+.device{justify-self:center;width:260px;height:530px;border-radius:34px;padding:12px;background:linear-gradient(160deg,#2c2640,#1a1726);border:1px solid rgba(255,255,255,0.1);box-shadow:0 40px 80px -30px rgba(0,0,0,0.7)}
+.device-screen{height:100%;border-radius:24px;background:
+   radial-gradient(90% 60% at 50% 12%, rgba(224,138,76,0.35), transparent 60%),
+   linear-gradient(180deg,#3a2c54,#19152a);
+   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:30px}
+.device-screen .dmark{width:60px;height:auto;opacity:0.98}
+.device-screen .dname{font-family:"Fraunces",serif;font-size:30px;color:#fff;font-weight:600}
+.device-screen .dtag{font-size:13px;color:var(--mist);letter-spacing:0.08em;text-transform:uppercase}
+
+/* about / company */
+.about .wrap{display:grid;grid-template-columns:0.8fr 1.2fr;gap:56px}
+@media(max-width:840px){.about .wrap{grid-template-columns:1fr;gap:28px}}
+.about p{font-size:17.5px;line-height:1.7;color:#3a3648}
+.about p + p{margin-top:20px}
+
+/* contact / footer */
+footer{background:var(--night);color:var(--mist);padding:76px 0 46px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr;gap:30px}}
+footer h4{font-family:"Inter",sans-serif;font-size:12.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--dusk2);margin:0 0 16px;font-weight:600}
+footer a{color:var(--mist);text-decoration:none}
+footer a:hover{color:var(--ember)}
+.foot-brand{display:flex;align-items:center;gap:11px;color:#fff;font-family:"Fraunces",serif;font-size:20px;font-weight:600;margin-bottom:16px}
+.foot-addr{font-size:14.5px;line-height:1.7;color:var(--mist);font-style:normal}
+.foot-links{display:flex;flex-direction:column;gap:11px;font-size:14.5px}
+.legal{margin-top:54px;padding-top:26px;border-top:1px solid rgba(255,255,255,0.1);font-size:13px;color:#8681972;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#86819a}
+.cin{font-variant-numeric:tabular-nums}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img class="mark" src="twilighthawk_logo.png" alt="TwilightHawk Tech logo" width="30" height="33">
+      TwilightHawk Tech
+    </a>
+    <nav class="nav-links">
+      <a href="#what">What we do</a>
+      <a href="#doyt">DoYt!</a>
+      <a href="#about">Company</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="eyebrow">TwilightHawk Tech Private Limited</div>
+    <h1>We build social and <em>interactive</em> mobile apps.</h1>
+    <p class="lead">A technology company from Tamil Nadu, India, designing and developing mobile and web applications, and the platforms behind them. Makers of DoYt!</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#doyt">See what we build</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+  <div class="horizon"></div>
+</section>
+
+<section id="what">
+  <div class="wrap">
+    <div class="kicker">What we do</div>
+    <h2 class="sec-head">Products people open every day, and the systems that run them.</h2>
+    <p class="sec-sub">We are a small, independent product company. We design the experience, write the software, and operate the infrastructure end to end - from the app in someone's hand to the services behind it.</p>
+    <div class="cols">
+      <div class="col">
+        <span class="col-num">Mobile apps</span>
+        <h3>Cross-platform products</h3>
+        <p>Native-quality iOS and Android applications built from a single, modern codebase, with the performance and polish a daily-use product needs.</p>
+      </div>
+      <div class="col">
+        <span class="col-num">Backend &amp; data</span>
+        <h3>Platforms that scale</h3>
+        <p>Real-time backends, recommendation systems, and the data pipelines that make a social product feel alive and personal to each person using it.</p>
+      </div>
+      <div class="col">
+        <span class="col-num">Product design</span>
+        <h3>Experiences, not screens</h3>
+        <p>We care about how a product feels in motion - the flow, the pacing, the small moments - as much as how any single screen looks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="doyt" class="product">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Our product</div>
+      <h2>DoYt! - challenge, prove, inspire.</h2>
+      <p>DoYt! is a social video-challenge platform. People take on one-minute challenges, film their proof, go head to head, and vote - turning everyday moments into something worth sharing. It is live on the App Store and Google Play.</p>
+      <div class="loop">
+        <span>Challenge</span><span>Prove</span><span>Duel</span><span>Vote</span><span>Leaderboard</span>
+      </div>
+      <div class="product-cta">
+        <a class="btn btn-primary" href="https://www.doyt.app/" target="_blank" rel="noopener">Visit DoYt!</a>
+      </div>
+    </div>
+    <div class="device" aria-hidden="true">
+      <div class="device-screen">
+        <img class="dmark" src="twilighthawk_logo.png" alt="TwilightHawk Tech" width="58" height="64">
+        <div class="dname">DoYt!</div>
+        <div class="dtag">Challenge · Prove · Inspire</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div>
+      <div class="kicker">The company</div>
+      <h2 class="sec-head">Built in India, for a global audience.</h2>
+    </div>
+    <div>
+      <p>TWILIGHTHAWK TECH PRIVATE LIMITED is a technology company registered in Tamil Nadu, India. We design, develop, operate, license, and distribute software, mobile applications, web applications, and other technology-enabled products and services.</p>
+      <p>We work independently and ship our own products - starting with DoYt! - while building the engineering and design foundations for what comes next. We believe small teams, close to their craft, can build things that feel genuinely different.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <img class="mark" src="twilighthawk_logo.png" alt="TwilightHawk Tech logo" width="30" height="33">
+          TwilightHawk Tech
+        </div>
+        <address class="foot-addr">
+          TWILIGHTHAWK TECH PRIVATE LIMITED<br>
+          Door No. 26-95, Elipor Vilai, Eathavilai,<br>
+          Mekkamandapam, Kalkulam,<br>
+          Kanyakumari - 629166, Tamil Nadu, India
+        </address>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <div class="foot-links">
+          <a href="#what">What we do</a>
+          <a href="#doyt">DoYt!</a>
+          <a href="#about">Company</a>
+          <a href="https://www.doyt.app/" target="_blank" rel="noopener">DoYt! website</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="foot-links">
+          <a href="mailto:contact@twilighthawk.com">contact@twilighthawk.com</a>
+          <a href="mailto:admin@twilighthawk.com">admin@twilighthawk.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 TWILIGHTHAWK TECH PRIVATE LIMITED. All rights reserved.</span>
+      <span class="cin">CIN: U62011TN2026PTC197670</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
